@@ -1,0 +1,164 @@
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;  margin:0px auto;
+}
+*{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.swiper-container {
+    width:100%;
+    height:100%;
+
+}
+.swiper-slide {
+   width:100%;
+   height:100%;
+}
+.content-bg{
+	width:100%;
+    position:relative;
+    z-index:1;
+}
+.content-bg img{
+    width:100%;
+    height:auto;
+}
+.content-cx{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index:2;
+}
+.content-cx-bg{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    z-index:2;
+    background-image:url(../img/tanyang_bg_02.jpg);
+    background-repeat: no-repeat;
+    background-position:0px bottom;
+}
+.com-title{
+    width:449px;
+    height:74px;
+    display:block;
+    position:absolute;
+    left:50%;
+    margin-left:-224px;
+    margin-top:460px;
+    -webkit-animation-delay:1.5s;
+    animation-delay:1.5s;
+}
+.com-title1{
+    width:519px;
+    height:81px;
+    display:block;
+    position:absolute;
+    right:0px;
+    margin-top:587px;
+    -webkit-animation-delay:0s;
+    animation-delay:0s;
+}
+.com-title2{
+    width:519px;
+    height:81px;
+    display:block;
+    position:absolute;
+    left:0px;
+    margin-top:707px;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
+}
+.com-title3{
+    width:519px;
+    height:81px;
+    display:block;
+    position:absolute;
+    right:0px;
+    margin-top:832px;
+    -webkit-animation-delay:1s;
+    animation-delay:1s;
+}
+.content-cover{
+    width:100%;
+    height:428px;
+    overflow:hidden;
+}
+.content-txt{
+    width:100%;
+    -webkit-animation-delay:.1s;
+    animation-delay:.1s;
+}
+.content-txt img{
+    width:100%;
+    height:auto;
+}
+.arrow-top {
+    width: 107px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -53.5px;
+    bottom:30px;
+    z-index:3;
+    color: #fff;
+    -webkit-animation-iteration-count: infinite;
+}
+.loading-block {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index:5;
+}
+.loading-block img {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+}
+.music-play{
+    width:103px;
+    height:103px;
+    background:url(../img/music_bg_03.png) 0px 0px;
+    position:fixed;
+    right:20px;
+    top:20px;
+    z-index:100;
+    -webkit-animation:'play' 1s linear infinite;
+}
+.stop-status{
+     width:103px;
+    height:103px;
+    background:url(../img/music_bg_03.png) 0px -103px;
+    position:fixed;
+    right:20px;
+    top:20px;
+    z-index:100;
+}
+@-webkit-keyframes play{
+    0%{
+        -webkit-transform:rotate(0deg);
+    }
+    50%{
+        -webkit-transform:rotate(180deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+    }
+   /* 100%{
+        -webkit-transform:rotate(0deg);
+    }*/
+}

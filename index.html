@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640, user-scalable=no">
+	<title>【重庆快立达物流有限公司】快以致信,立以致诚,达以致优</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/tanyang.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="img/tanyang-cover_03.jpg" media="screen" />
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+</head>
+<body>
+<div style="display:none;"><img src="img/tanyang-cover_03.jpg" alt=""/></div>
+<div class="loading-block" id="loading-block">
+	<img src="img/loading.gif" alt="">
+</div>
+<script type="text/javascript">
+	(function(){
+		var loading=document.getElementById('loading-block');
+		window.addEventListener('load',function(){
+			loading.style.display='none';
+			var firstC=$('.swiper-slide').eq(0).find('[data-animate]');
+			firstC.each(function(index,elem){
+				var attr=$(elem).attr('data-animate');
+				$(elem).addClass('animated');
+				$(elem).addClass(attr);
+			});
+		});
+	})();
+</script>
+	<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				<div class="content-bg">
+					<img src="img/tanyangbg.jpg" alt=""/>
+
+				</div>
+				<div class="content-cx">
+					<p class="com-title" data-animate="fadeInDown"><img src="img/tanyang-title_03.png" alt=""/></p>
+					<p class="com-title1" data-animate="fadeInRight"><img src="img/tanyang-title_07.png" alt=""/></p>
+					<p class="com-title2" data-animate="fadeInLeft"><img src="img/tanyang-title_09.png" alt=""/></p>
+					<p class="com-title3" data-animate="fadeInRight"><img src="img/tanyang-title_13.png" alt=""/></p>
+
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+            <div class="swiper-slide">
+				<div class="content-cx-bg">
+					<div class="content-cover">
+						<img src="img/tanyang_bg_01.jpg" alt="" class="" data-animate="pulse"/>
+					</div>
+					<div class="content-txt" class="" data-animate="fadeInUp"><img src="img/tanyang_02.png" alt=""/></div>
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+            <div class="swiper-slide">
+				<div class="content-cx-bg">
+					<div class="content-cover">
+						<img src="img/tanyang3_01.png" alt="" class="" data-animate="pulse"/>
+					</div>
+					<div class="content-txt" class="" data-animate="fadeInUp"><img src="img/tanyang3_02.png" alt=""/></div>
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+            <div class="swiper-slide">
+				<div class="content-cx-bg">
+					<div class="content-cover">
+						<img src="img/tanyang4_01.png" alt="" class="" data-animate="pulse"/>
+					</div>
+					<div class="content-txt" class="" data-animate="fadeInUp"><img src="img/tanyang4_02.png" alt=""/></div>
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+            <div class="swiper-slide">
+				<div class="content-cx-bg">
+					<div class="content-cover">
+						<img src="img/tanyang5_01.png" alt="" class="" data-animate="pulse"/>
+					</div>
+					<div class="content-txt" class="" data-animate="fadeInUp"><img src="img/tanyang5_02.png" alt=""/></div>
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+            <div class="swiper-slide">
+				<div class="content-cx-bg">
+					<div class="content-cover">
+						<img src="img/tanyang6_01.png" alt="" class="" data-animate="pulse"/>
+					</div>
+					<div class="content-txt" class="" data-animate="fadeInUp"><img src="img/tanyang6_02.png" alt=""/></div>
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+            <div class="swiper-slide">
+				<div class="content-cx-bg">
+					<div class="content-cover">
+						<img src="img/tanyang7_01.png" alt="" class="" data-animate="pulse"/>
+					</div>
+					<div class="content-txt" class="" data-animate="fadeInUp"><img src="img/tanyang7_02.png" alt=""/></div>
+				</div>
+				<span class="arrow-top animated fadeInDown"><img src="img/arrow_bottom.jpg" alt=""></span>
+			</div>
+			<div class="swiper-slide">
+				<div class="content-bg">
+					<img src="img/tanyang_last.jpg" alt=""/>
+
+				</div>
+			</div>
+        </div>
+    </div>
+	<div class="music-play" id="music-play" ></div>
+    <audio src="music.mp3" data-satus="play"></audio>
+	<script>
+   	(function(){
+   		 var swiper = new Swiper('.swiper-container', {
+        	 direction: 'vertical',
+			 onTransitionEnd:function(swiper){
+				 var page=swiper.slides;
+				 var prevPage=page.eq(swiper.previousIndex);
+				 var curPage=page.eq(swiper.activeIndex);
+
+				 var prevAnimatePage=prevPage.find('[data-animate]');
+				 var curAnimatePage=curPage.find('[data-animate]');
+
+				 toChange(prevAnimatePage);
+				 toChange(curAnimatePage);
+			 }
+    	 });
+
+		 function toChange(page){
+			 page.each(function(index,elem){
+			     var attr=$(elem).attr('data-animate');
+
+				 if($(elem).hasClass(attr)){
+					 $(elem).removeClass(attr);
+					 $(elem).removeClass('animated');
+				 }else{
+					$(elem).addClass(attr);
+					 $(elem).addClass('animated');
+				 }
+			 });
+		 }
+		 function audioEvent(){
+		 	var audio=$('audio');
+		 	var playBtn=$('#music-play');
+		 	audio.on('canplaythrough',function(){
+		 		audio[0].play();
+		 		audio[0].volume=0.4;
+		 		audio.attr('loop','loop');
+		 	});
+		 	playBtn.on('touchstart',function(){
+		 		
+		 		if(audio.attr('data-satus')=='pluse'){
+		 			audio[0].play();
+		 			audio.attr('data-satus','play');
+		 			$(this).removeClass('stop-status');
+		 			$(this).addClass('music-play');
+		 			
+		 		}else{
+		 			audio[0].pause();
+		 			audio.attr('data-satus','pluse');
+		 			$(this).removeClass('music-play');
+		 			$(this).addClass('stop-status');
+		 			
+		 			
+		 		}
+		 	});
+		 	$(window).on('unload',function(){
+		 		audio[0].pause();
+		 	});
+		 };
+		 audioEvent();
+   	})();
+    </script>
+</body>
+</html>
